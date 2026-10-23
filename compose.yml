@@ -1,0 +1,21 @@
+services:
+  cli:
+    build:
+      context: .
+      dockerfile: 5.6-cli.Dockerfile
+    image: ghcr.io/arisudesu/php:5.6.40-cli-alpine3.8-php2shell-patch
+    command: /bin/false
+
+  fpm:
+    build:
+      context: .
+      dockerfile: 5.6-fpm.Dockerfile
+    image: ghcr.io/arisudesu/php:5.6.40-fpm-alpine3.8-php2shell-patch
+    command: /bin/false
+
+  zts:
+    build:
+      context: .
+      dockerfile: 5.6-zts.Dockerfile
+    image: ghcr.io/arisudesu/php:5.6.40-zts-alpine3.8-php2shell-patch
+    command: /bin/false
